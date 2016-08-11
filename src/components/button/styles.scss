@@ -1,0 +1,12 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/buttons';
+
+.btn {
+  text-transform: uppercase;
+
+  &:focus,
+  &:active:focus {
+    outline: none;
+  }
+}

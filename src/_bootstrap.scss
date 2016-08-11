@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/variables';
+
+$enable-flex: true;
+$enable-grid-classes: false;
+$enable-rounded: false;
+
+$body-bg: #f7f7f7;
+$body-color: #222;
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+$headings-font-weight: 400;
+
+$input-color: $body-color;
+
+$form-group-margin-bottom: 0;

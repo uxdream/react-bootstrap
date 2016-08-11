@@ -1,0 +1,54 @@
+@import '../src/reset';
+
+.view {
+  $padding: 40px;
+
+  padding: $padding 0;
+
+  section {
+    & + section {
+      margin-top: $padding;
+    }
+
+    & > h1 {
+      margin-bottom: 0;
+
+      font-weight: normal;
+      text-transform: lowercase;
+
+      &:before {
+        content: '_';
+      }
+    }
+
+    & > div {
+      & > * {
+        margin-top: $padding / 4 !important;
+      }
+    }
+  }
+
+  .buttons,
+  .checkboxes {
+    & > div {
+      & > * {
+        margin-right: $padding / 4;
+      }
+    }
+  }
+
+  .checkboxes {
+    & > div {
+      & > * {
+        margin-left: $padding / 4;
+      }
+    }
+  }
+
+  .checkboxes,
+  .paginations {
+    & > div {
+      text-align: center;
+    }
+  }
+}

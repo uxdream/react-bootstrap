@@ -1,0 +1,27 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/forms';
+
+.form-group--input {
+  .form-control-label,
+  small {
+    user-select: none;
+
+    font-size: $font-size-sm;
+  }
+
+  .form-control-label {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    cursor: pointer;
+
+    font-weight: 600;
+  }
+
+  small {
+    opacity: 0.5;
+    display: block;
+    cursor: default;
+  }
+}

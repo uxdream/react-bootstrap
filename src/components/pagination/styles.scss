@@ -1,0 +1,12 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/pagination';
+
+.pagination {
+  margin: 0;
+  user-select: none;
+
+  .page-link {
+    cursor: pointer;
+  }
+}

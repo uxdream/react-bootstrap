@@ -1,0 +1,9 @@
+.page {
+  $max-width: 1000px;
+  $padding: 40px;
+
+  margin: 0 auto;
+  padding: 0 $padding;
+  width: 100%;
+  max-width: $max-width + $padding * 2;
+}

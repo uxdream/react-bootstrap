@@ -1,0 +1,169 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/forms';
+
+.form-group--range {
+  .form-control-label,
+  small {
+    user-select: none;
+
+    font-size: $font-size-sm;
+  }
+
+  .form-control-label {
+    padding: 0;
+
+    font-weight: 600;
+  }
+
+  small {
+    opacity: 0.5;
+    display: block;
+    cursor: default;
+  }
+}
+
+.range {
+  $height: $spacer-y / 2;
+  $handle-height: $height * 3;
+  $handle-width: $height * 5;
+
+  padding: ($handle-height - $height) / 2 $handle-width / 2;
+  user-select: none;
+
+  &.range--danger {
+    .range__trail {
+      &.disabled {
+        &:before,
+        .range__bar {
+          background: mix($progress-bar-danger-bg, $progress-bg);
+        }
+      }
+
+      &:before {
+        background: $progress-bar-danger-bg;
+      }
+    }
+
+    .range__bar {
+      background: $progress-bar-danger-bg;
+    }
+  }
+
+  &.range--success {
+    .range__trail {
+      &.disabled {
+        &:before,
+        .range__bar {
+          background: mix($progress-bar-success-bg, $progress-bg);
+        }
+      }
+
+      &:before {
+        background: $progress-bar-success-bg;
+      }
+    }
+
+    .range__bar {
+      background: $progress-bar-success-bg;
+    }
+  }
+
+  &.range--warning {
+    .range__trail {
+      &.disabled {
+        &:before,
+        .range__bar {
+          background: mix($progress-bar-warning-bg, $progress-bg);
+        }
+      }
+
+      &:before {
+        background: $progress-bar-warning-bg;
+      }
+    }
+
+    .range__bar {
+      background: $progress-bar-warning-bg;
+    }
+  }
+
+  .range__trail {
+    @include border-radius($progress-border-radius);
+
+    height: $height;
+    background: $progress-bg;
+    cursor: pointer;
+
+    &.disabled {
+      &:before,
+      .range__bar {
+        background: mix($progress-bar-bg, $progress-bg);
+      }
+
+      &,
+      .range__handle {
+        cursor: $cursor-disabled;
+      }
+    }
+
+    &:before,
+    &:after {
+      @include border-radius($progress-border-radius);
+
+      content: '';
+      width: $handle-width / 2;
+      height: $height;
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      background: $progress-bar-bg;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      right: 100%;
+    }
+
+    &:after {
+      background: $progress-bg;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      left: 100%;
+    }
+  }
+
+  .range__bar {
+    height: 100%;
+    background: $progress-bar-bg;
+
+    &.range__bar-1 {
+      display: none;
+    }
+  }
+
+  .range__handle {
+    margin-top: ($handle-height - $height) / -2;
+    z-index: $zindex-dropdown - 10 !important;
+    cursor: grab;
+
+    &.range__handle--active {
+      cursor: grabbing;
+    }
+
+    & > div {
+      @include border-radius($progress-border-radius);
+
+      margin-left: $handle-width / -2;
+      width: $handle-width;
+      height: $handle-height;
+      background: $btn-secondary-bg;
+      box-shadow: inset 0 0 0 1px $btn-secondary-border;
+      position: absolute;
+
+      font-size: $height * 1.5;
+      text-align: center;
+      line-height: $handle-height;
+    }
+  }
+}

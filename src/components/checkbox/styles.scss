@@ -1,0 +1,60 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/forms';
+
+.form-group--checkbox {
+  $size: $spacer-y * 1.5;
+
+  display: inline;
+
+  font-size: 0;
+
+  .form-control {
+    padding: 0;
+    width: $size;
+    height: $size;
+    background-image: none !important;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &.form-control-danger {
+      &:after {
+        color: $brand-danger;
+      }
+    }
+
+    &.form-control-warning {
+      &:after {
+        color: $brand-warning;
+      }
+    }
+
+    &.form-control-success {
+      &:after {
+        color: $brand-success;
+      }
+    }
+
+    &.form-control-checked {
+      &:after {
+        content: '✓';
+      }
+    }
+
+    &.form-control-disabled {
+      background-color: $input-bg-disabled;
+      cursor: $cursor-disabled;
+    }
+
+    &:after {
+      position: absolute;
+      top: $input-btn-border-width * -1;
+      bottom: $input-btn-border-width * -1;
+      left: $input-btn-border-width * -1;
+      right: $input-btn-border-width * -1;
+
+      line-height: $size;
+    }
+  }
+}

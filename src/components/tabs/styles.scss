@@ -1,0 +1,17 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/nav';
+
+.nav {
+  &.nav-tabs {
+    user-select: none;
+
+    .nav-item {
+      .nav-link {
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

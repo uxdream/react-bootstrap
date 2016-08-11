@@ -1,0 +1,148 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/scss/forms';
+
+.form-group--select {
+  .form-control-label,
+  small {
+    user-select: none;
+
+    font-size: $font-size-sm;
+  }
+
+  .form-control-label {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-weight: 600;
+  }
+
+  small {
+    opacity: 0.5;
+    display: block;
+    cursor: default;
+  }
+}
+
+.Select {
+  $arrow-height: $caret-width * 1.25;
+
+  position: relative;
+
+  &.is-disabled {
+    .Select-control {
+      background-color: $input-bg-disabled;
+      cursor: $cursor-disabled;
+    }
+  }
+
+  &.is-open {
+    .Select-control {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .Select-menu-outer {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &.Select--danger {
+    .Select-control,
+    .Select-menu-outer {
+      border-color: $brand-danger;
+    }
+
+    .Select-control {
+      .Select-arrow-zone {
+        border-top-color: $brand-danger;
+      }
+    }
+  }
+
+  &.Select--success {
+    .Select-control,
+    .Select-menu-outer {
+      border-color: $brand-success;
+    }
+
+    .Select-control {
+      .Select-arrow-zone {
+        border-top-color: $brand-success;
+      }
+    }
+  }
+
+  &.Select--warning {
+    .Select-control,
+    .Select-menu-outer {
+      border-color: $brand-warning;
+    }
+
+    .Select-control {
+      .Select-arrow-zone {
+        border-top-color: $brand-warning;
+      }
+    }
+  }
+
+  .Select-control {
+    @include border-radius($input-border-radius);
+    @include box-shadow($input-box-shadow);
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+    padding: $input-padding-y $arrow-height * 6 $input-padding-y $input-padding-x;
+    background-color: $input-bg;
+    border: $input-btn-border-width solid $input-border-color;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+
+    color: $input-color;
+    font-size: $font-size-base;
+    line-height: $line-height;
+
+    .Select-input {
+      display: inline !important;
+    }
+
+    .Select-arrow-zone {
+      margin-top: $arrow-height / -2;
+      border-top: $arrow-height solid $input-color;
+      border-right: $arrow-height solid transparent;
+      border-left: $arrow-height solid transparent;
+      position: absolute;
+      top: 50%;
+      right: $arrow-height * 2;
+    }
+  }
+
+  .Select-menu-outer {
+    @include border-radius($input-border-radius);
+
+    margin-top: $input-btn-border-width * -1;
+    max-height: $input-height * 5;
+    background-color: $input-bg;
+    border: $input-btn-border-width solid $input-border-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: $zindex-dropdown;
+
+    .Select-option {
+      padding: $input-padding-y $input-padding-x;
+      cursor: pointer;
+
+      &:hover {
+        background: $input-bg-disabled;
+      }
+
+      &.is-selected {
+        opacity: 0.5;
+      }
+    }
+  }
+}
