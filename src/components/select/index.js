@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import ReactSelect from 'react-select';
 
-import propTypes from '../../utils/propTypes';
+import { propTypes } from '../../utils';
 
 export default class Select extends Component {
   static propTypes = {

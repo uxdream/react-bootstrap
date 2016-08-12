@@ -3,8 +3,7 @@ import './styles.scss';
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 
-import propTypes from '../../utils/propTypes';
-import randomId  from '../../utils/randomId';
+import { propTypes, randomId } from '../../utils';
 
 export default class Input extends Component {
   static propTypes = {

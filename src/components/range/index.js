@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import ReactSlider from 'react-slider';
 
-import propTypes from '../../utils/propTypes';
+import { propTypes } from '../../utils';
 
 export default class Range extends Component {
   static propTypes = {

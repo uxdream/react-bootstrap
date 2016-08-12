@@ -4,8 +4,7 @@ import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import propTypes from '../../utils/propTypes';
-import reactKey  from '../../utils/reactKey';
+import { propTypes, reactKey } from '../../utils';
 
 export default class Tabs extends Component {
   static contextTypes = {

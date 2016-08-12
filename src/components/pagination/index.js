@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { concat, flatten, remove, uniq } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
-import propTypes from '../../utils/propTypes';
+import { propTypes } from '../../utils';
 
 export default class Pagination extends Component {
   static propTypes={
