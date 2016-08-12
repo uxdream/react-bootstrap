@@ -1,5 +1,6 @@
 import Button     from './components/button';
 import Checkbox   from './components/checkbox';
+import Icon       from './components/icon';
 import Input      from './components/input';
 import Page       from './components/page';
 import Pagination from './components/pagination';
@@ -10,6 +11,7 @@ import Tabs       from './components/tabs';
 export {
   Button,
   Checkbox,
+  Icon,
   Input,
   Page,
   Pagination,

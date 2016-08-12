@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       url('./font.woff') format('woff');
+}
+
+
+.icon {
+  user-select: none;
+
+  font-family: 'Material Icons';
+  line-height: 1;
+}

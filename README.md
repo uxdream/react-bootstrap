@@ -2,11 +2,16 @@
 
 ## Instalation
 
+###Install package & change `exclude` rule for webpack `babel-loader`
 ```
 npm install --save uxdream/react-bootstrap
 ```
 
-## Development usage
+```
+exclude: /node_modules\/(?!react\-bootstrap)/
+```
+
+## Development
 
 ```
 npm run dev
