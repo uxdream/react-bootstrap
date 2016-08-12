@@ -71,4 +71,9 @@ module.exports = {
       autoprefixer,
     ];
   },
+  resolve: {
+    alias: {
+      bootstrap: path.resolve('./node_modules/bootstrap/scss'),
+    },
+  },
 };
