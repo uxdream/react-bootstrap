@@ -1,9 +1,10 @@
+@import '../../bootstrap';
+
 .page {
   $max-width: 1000px;
-  $padding: 40px;
 
   margin: 0 auto;
-  padding: 0 $padding;
+  padding: 0 $spacer * 2;
   width: 100%;
-  max-width: $max-width + $padding * 2;
+  max-width: calc(#{ $max-width } + #{ $spacer * 4 });
 }

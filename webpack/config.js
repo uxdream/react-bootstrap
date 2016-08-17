@@ -42,6 +42,13 @@ module.exports = {
           'sass?sourceMap',
         ],
       },
+      {
+        test: /\.woff$/,
+        loader: 'file',
+        query: {
+          name: 'assets/[hash].[ext]',
+        },
+      },
     ],
     preLoaders: [
       {
@@ -54,7 +61,7 @@ module.exports = {
   output: {
     filename: '[hash].js',
     path: path.resolve('./build'),
-    publicPath: '/',
+    publicPath: 'http://localhost:9000/',
   },
   plugins: [
     new Html({

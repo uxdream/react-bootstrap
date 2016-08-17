@@ -8,6 +8,7 @@ import { propTypes } from '../../utils';
 
 export default class Range extends Component {
   static propTypes = {
+    children: PropTypes.node,
     className: propTypes.className,
     disabled: PropTypes.bool,
     label: PropTypes.node,
@@ -53,7 +54,9 @@ export default class Range extends Component {
 
   renderRange(props, valid) {
     const {
+      children,
       value,
+      ...restProps,
     } = props;
 
     const classes = classnames(
@@ -66,15 +69,16 @@ export default class Range extends Component {
     return (
       <div className={ classes }>
         <ReactSlider
-          { ...props }
+          { ...restProps }
           withBars
           barClassName="range__bar"
           className="range__trail"
           handleActiveClassName="range__handle--active"
           handleClassName="range__handle"
           onChange={ this._onChange }
+          value={ value }
         >
-          <div>{ value }</div>
+          <div>{ children ? children : value }</div>
         </ReactSlider>
       </div>
     );

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   Button,
   Checkbox,
+  Icon,
   Input,
   Page,
   Pagination,
@@ -135,6 +136,47 @@ export default class View extends Component {
               <Button size="large">Large</Button>
             </div>
           </section>
+          <section className="checkboxes">
+            <h1>Checkbox</h1>
+            <div>
+              <Checkbox
+                onChange={ this._onCheckboxChange }
+                value={ checkbox }
+              />
+              <Checkbox
+                disabled
+                onChange={ this._onCheckboxChange }
+                value={ checkbox }
+              />
+            </div>
+            <div>
+              <Checkbox
+                onChange={ this._onCheckboxChange }
+                valid="success"
+                value={ checkbox }
+              />
+              <Checkbox
+                onChange={ this._onCheckboxChange }
+                valid="warning"
+                value={ checkbox }
+              />
+              <Checkbox
+                onChange={ this._onCheckboxChange }
+                valid="danger"
+                value={ checkbox }
+              />
+            </div>
+          </section>
+          <section className="icons">
+            <h1>Icon</h1>
+            <div>
+              <Icon icon="face" />
+              <Icon icon="face" />
+              <Icon icon="face" />
+              <Icon icon="face" />
+              <Icon icon="face" />
+            </div>
+          </section>
           <section>
             <h1>Input</h1>
             <div>
@@ -187,54 +229,13 @@ export default class View extends Component {
               />
             </div>
           </section>
-          <section className="checkboxes">
-            <h1>Checkbox</h1>
+          <section className="paginations">
+            <h1>Pagination</h1>
             <div>
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-            </div>
-            <div>
-              <Checkbox
-                disabled
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-              <Checkbox
-                disabled
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-              <Checkbox
-                disabled
-                onChange={ this._onCheckboxChange }
-                value={ checkbox }
-              />
-            </div>
-            <div>
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                valid="success"
-                value={ checkbox }
-              />
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                valid="warning"
-                value={ checkbox }
-              />
-              <Checkbox
-                onChange={ this._onCheckboxChange }
-                valid="danger"
-                value={ checkbox }
+              <Pagination
+                active={ pagination }
+                onChange={ this._onPaginationChange }
+                pages={ 20 }
               />
             </div>
           </section>
@@ -250,7 +251,7 @@ export default class View extends Component {
                 message="Message"
                 onChange={ this._onRangeChange }
                 value={ range }
-              />
+              >{ `${ range }%` }</Range>
             </div>
             <div>
               <Range
@@ -361,16 +362,6 @@ export default class View extends Component {
                     url: '?tab-4',
                   },
                 ] }
-              />
-            </div>
-          </section>
-          <section className="paginations">
-            <h1>Pagination</h1>
-            <div>
-              <Pagination
-                active={ pagination }
-                onChange={ this._onPaginationChange }
-                pages={ 20 }
               />
             </div>
           </section>
