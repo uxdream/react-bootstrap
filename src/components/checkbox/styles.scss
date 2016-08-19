@@ -19,26 +19,20 @@
     cursor: pointer;
 
     &.form-control-danger {
-      &:after {
-        color: $brand-danger;
-      }
+      color: $brand-danger;
     }
 
     &.form-control-warning {
-      &:after {
-        color: $brand-warning;
-      }
+      color: $brand-warning;
     }
 
     &.form-control-success {
-      &:after {
-        color: $brand-success;
-      }
+      color: $brand-success;
     }
 
     &.form-control-checked {
-      &:after {
-        content: '✓';
+      .icon {
+        opacity: 1;
       }
     }
 
@@ -47,13 +41,16 @@
       cursor: $cursor-disabled;
     }
 
-    &:after {
+    .icon {
       position: absolute;
-      top: $input-btn-border-width * -1;
-      bottom: $input-btn-border-width * -1;
-      left: $input-btn-border-width * -1;
-      right: $input-btn-border-width * -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
 
+      font-size: $size * 0.75 !important;
+      text-align: center;
       line-height: $size;
     }
   }

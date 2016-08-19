@@ -3,6 +3,8 @@ import './styles.scss';
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 
+import Icon from '../icon';
+
 import { propTypes } from '../../utils';
 
 export default class Checkbox extends Component {
@@ -54,7 +56,9 @@ export default class Checkbox extends Component {
         { ...rest }
         className={ classes }
         onClick={ this._onChange }
-      />
+      >
+        <Icon icon="done" />
+      </div>
     );
   }
 
