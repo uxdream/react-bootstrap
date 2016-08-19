@@ -176,6 +176,17 @@ export default class View extends Component {
               <Icon icon="face" />
               <Icon icon="face" />
             </div>
+            <div>
+              <Button>
+                <Icon icon="face" />
+              </Button>
+              <Button variant="secondary">
+                <Icon icon="face" />
+              </Button>
+              <Button variant="link">
+                <Icon icon="face" />
+              </Button>
+            </div>
           </section>
           <section>
             <h1>Input</h1>

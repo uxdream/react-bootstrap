@@ -9,4 +9,9 @@
   &:active:focus {
     outline: none;
   }
+
+  .icon {
+    text-transform: lowercase;
+    line-height: $line-height;
+  }
 }
