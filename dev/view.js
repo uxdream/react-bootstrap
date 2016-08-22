@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import {
+  Breadcrumb,
   Button,
   Checkbox,
   Icon,
@@ -91,6 +92,27 @@ export default class View extends Component {
     return (
       <section className="view">
         <Page>
+          <section>
+            <h1>Breadcrumb</h1>
+            <div>
+              <Breadcrumb
+                crumbs={ [
+                  {
+                    label: 'Home',
+                    url: '?crumb-home',
+                  },
+                  {
+                    label: 'Settings',
+                    url: '?crumb-settings',
+                  },
+                  {
+                    label: 'Email address',
+                    url: '?crumb-email-address',
+                  },
+                ] }
+              />
+            </div>
+          </section>
           <section className="buttons">
             <h1>Button</h1>
             <div>

@@ -1,0 +1,15 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/breadcrumb';
+
+.breadcrumb {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+
+  .breadcrumb-item {
+    &.active {
+      cursor: default;
+    }
+  }
+}

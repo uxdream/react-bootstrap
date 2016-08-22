@@ -69,6 +69,7 @@ export default class Tabs extends Component {
       disabled,
       label,
       url,
+      ...rest
     } = tab;
 
     const classes = classnames(
@@ -76,13 +77,14 @@ export default class Tabs extends Component {
       className,
     );
 
-    const isLink = !disabled && url;
+    const isNotDisabledLink = !disabled && url;
 
     return (
       <li
+        { ...rest }
         className={ classes }
         key={ reactKey(label) }
-      >{ isLink ? this.renderLink(tab) : this.renderSpan(tab) }</li>
+      >{ isNotDisabledLink ? this.renderLink(tab) : this.renderSpan(tab) }</li>
     );
   }
 

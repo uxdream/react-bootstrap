@@ -7,6 +7,10 @@ export default {
       PropTypes.bool
     ),
   ]),
+  crumb: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }),
   selectOption: PropTypes.shape({
     label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([

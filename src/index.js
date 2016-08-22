@@ -1,3 +1,4 @@
+import Breadcrumb from './components/breadcrumb';
 import Button     from './components/button';
 import Checkbox   from './components/checkbox';
 import Icon       from './components/icon';
@@ -9,6 +10,7 @@ import Select     from './components/select';
 import Tabs       from './components/tabs';
 
 export {
+  Breadcrumb,
   Button,
   Checkbox,
   Icon,
