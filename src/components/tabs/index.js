@@ -27,6 +27,7 @@ export default class Tabs extends Component {
       disabled,
       label,
       url,
+      ...rest,
     } = tab;
 
     const classes = classnames(
@@ -39,6 +40,7 @@ export default class Tabs extends Component {
 
     return (
       <Link
+        { ...rest }
         className={ classes }
         to={ url }
       >{ label }</Link>
@@ -49,6 +51,7 @@ export default class Tabs extends Component {
     const {
       disabled,
       label,
+      ...rest,
     } = tab;
 
     const classes = classnames(
@@ -59,7 +62,10 @@ export default class Tabs extends Component {
     );
 
     return (
-      <span className={ classes }>{ label }</span>
+      <span
+        { ...rest }
+        className={ classes }
+      >{ label }</span>
     );
   }
 
@@ -69,7 +75,6 @@ export default class Tabs extends Component {
       disabled,
       label,
       url,
-      ...rest
     } = tab;
 
     const classes = classnames(
@@ -81,7 +86,6 @@ export default class Tabs extends Component {
 
     return (
       <li
-        { ...rest }
         className={ classes }
         key={ reactKey(label) }
       >{ isNotDisabledLink ? this.renderLink(tab) : this.renderSpan(tab) }</li>
