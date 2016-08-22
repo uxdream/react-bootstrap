@@ -16,6 +16,7 @@ export default class Select extends Component {
     options: PropTypes.arrayOf(
       propTypes.selectOption
     ).isRequired,
+    showAllOptions: PropTypes.bool,
     valid: propTypes.valid,
     value: propTypes.selectOption.isRequired,
   }
@@ -56,12 +57,14 @@ export default class Select extends Component {
 
   renderSelect(props, valid) {
     const {
+      showAllOptions,
       value,
     } = props;
 
     const classes = classnames(
       {
         [`Select--${ valid }`]: !!valid,
+        'Select--show-all-options': showAllOptions,
       }
     );
 

@@ -88,6 +88,12 @@
     }
   }
 
+  &.Select--show-all-options {
+    .Select-menu-outer {
+      max-height: auto;
+    }
+  }
+
   .Select-control {
     @include border-radius($input-border-radius);
     @include box-shadow($input-box-shadow);
