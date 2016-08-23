@@ -8,11 +8,11 @@ export default {
     ),
   ]),
   crumb: PropTypes.shape({
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     url: PropTypes.string.isRequired,
   }),
   selectOption: PropTypes.shape({
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     value: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -20,7 +20,7 @@ export default {
   }),
   tab: PropTypes.shape({
     disabled: PropTypes.bool,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     url: PropTypes.string,
   }),
   valid: PropTypes.oneOf([
