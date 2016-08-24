@@ -14,7 +14,7 @@ export default class Breadcrumb extends Component {
   static propTypes = {
     className: propTypes.className,
     crumbs: PropTypes.arrayOf(
-      propTypes.crumbs
+      propTypes.crumb
     ).isRequired,
   }
 

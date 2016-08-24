@@ -200,13 +200,13 @@ export default class View extends Component {
             </div>
             <div>
               <Button>
-                <Icon icon="face" />
+                Face <Icon icon="face" />
               </Button>
               <Button variant="secondary">
-                <Icon icon="face" />
+                Face <Icon icon="face" />
               </Button>
               <Button variant="link">
-                <Icon icon="face" />
+                Face <Icon icon="face" />
               </Button>
             </div>
           </section>

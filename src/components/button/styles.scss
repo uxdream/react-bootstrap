@@ -11,7 +11,10 @@
   }
 
   .icon {
+    margin-top: -0.25rem;
+    vertical-align: middle;
+    display: inline-block;
+
     text-transform: lowercase;
-    line-height: $line-height;
   }
 }
