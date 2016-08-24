@@ -51,6 +51,7 @@ export default class Tabs extends Component {
     const {
       disabled,
       label,
+      url, // eslint-disable-line no-unused-vars
       ...rest,
     } = tab;
 
