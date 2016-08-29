@@ -11,35 +11,35 @@
     "lint": "eslint **/*.js"
   },
   "devDependencies": {
-    "autoprefixer": "6.3.7",
-    "babel-core": "6.10.4",
+    "autoprefixer": "6.4.0",
+    "babel-core": "6.14.0",
     "babel-eslint": "6.1.2",
-    "babel-loader": "6.2.4",
-    "babel-preset-es2015": "6.9.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
     "babel-preset-react": "6.11.1",
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.5.0",
-    "css-loader": "0.23.1",
-    "eslint": "3.1.0",
-    "eslint-loader": "1.4.1",
-    "eslint-plugin-import": "1.11.0",
-    "eslint-plugin-react": "5.2.2",
+    "css-loader": "0.24.0",
+    "eslint": "3.4.0",
+    "eslint-loader": "1.5.0",
+    "eslint-plugin-import": "1.14.0",
+    "eslint-plugin-react": "6.2.0",
     "file-loader": "0.9.0",
     "html-webpack-plugin": "2.22.0",
     "node-sass": "3.8.0",
-    "postcss-loader": "0.9.1",
-    "react-dom": "15.3.0",
+    "postcss-loader": "0.11.0",
+    "react-dom": "15.3.1",
     "sass-loader": "4.0.0",
     "style-loader": "0.13.1",
-    "webpack": "1.13.0",
-    "webpack-dev-server": "1.14.1"
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.15.0"
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.2",
     "classnames": "2.2.5",
-    "react": "15.3.0",
+    "react": "15.3.1",
     "react-select": "1.0.0-beta14",
     "react-slider": "uxdream/react-slider",
-    "react-router": "2.6.1"
+    "react-router": "2.7.0"
   }
 }
