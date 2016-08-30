@@ -2,14 +2,15 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'),
-       url('./font.woff') format('woff');
+  src: url('./font.woff') format('woff');
 }
 
 
 .icon {
+  vertical-align: middle;
   user-select: none;
 
   font-family: 'Material Icons';
+  text-transform: lowercase !important;
   line-height: 1;
 }
