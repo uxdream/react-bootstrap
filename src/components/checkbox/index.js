@@ -57,7 +57,7 @@ export default class Checkbox extends Component {
         className={ classes }
         onClick={ this._onChange }
       >
-        <Icon icon="check" />
+        <Icon icon="&#xE5CA;" />
       </div>
     );
   }

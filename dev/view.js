@@ -192,21 +192,21 @@ export default class View extends Component {
           <section className="icons">
             <h1>Icon</h1>
             <div>
-              <Icon icon="face" />
-              <Icon icon="face" />
-              <Icon icon="face" />
-              <Icon icon="face" />
-              <Icon icon="face" />
+              <Icon icon="&#xE87D;" />
+              <Icon icon="&#xE87D;" />
+              <Icon icon="&#xE87D;" />
+              <Icon icon="&#xE87D;" />
+              <Icon icon="&#xE87D;" />
             </div>
             <div>
               <Button>
-                Face <Icon icon="face" />
+                Face <Icon icon="&#xE87D;" />
               </Button>
               <Button variant="secondary">
-                Face <Icon icon="face" />
+                Face <Icon icon="&#xE87D;" />
               </Button>
               <Button variant="link">
-                Face <Icon icon="face" />
+                Face <Icon icon="&#xE87D;" />
               </Button>
             </div>
           </section>

@@ -34,8 +34,13 @@ export default class Icon extends Component {
       <span
         { ...props }
         className={ classes }
-        style={ { fontSize: size } }
-      >{ icon }</span>
+        dangerouslySetInnerHTML={ { // eslint-disable-line react/no-danger
+          __html: icon,
+        } }
+        style={ {
+          fontSize: size,
+        } }
+      />
     );
   }
 }

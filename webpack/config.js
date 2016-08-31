@@ -25,6 +25,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
+          comments: false,
+          compact: true,
           presets: [
             'es2015',
             'react',
