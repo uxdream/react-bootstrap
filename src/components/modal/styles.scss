@@ -2,6 +2,12 @@
 
 @import '~bootstrap/modal';
 
+.modal {
+  padding: $spacer;
+  background: rgba($body-color, 0.9);
+  display: block;
+}
+
 .modal-dialog {
   margin: 0 auto;
 
