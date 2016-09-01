@@ -6,6 +6,7 @@ import {
   Checkbox,
   Icon,
   Input,
+  Modal,
   Page,
   Pagination,
   Range,
@@ -259,6 +260,16 @@ export default class View extends Component {
                 placeholder="Placeholder"
                 valid="danger"
                 value={ input }
+              />
+            </div>
+          </section>
+          <section>
+            <h1>Modal</h1>
+            <div>
+              <Modal
+                close={ () => {
+                  console.log('Close modal');
+                } }
               />
             </div>
           </section>

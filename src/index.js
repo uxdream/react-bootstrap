@@ -3,6 +3,7 @@ import Button     from './components/button';
 import Checkbox   from './components/checkbox';
 import Icon       from './components/icon';
 import Input      from './components/input';
+import Modal      from './components/modal';
 import Page       from './components/page';
 import Pagination from './components/pagination';
 import Range      from './components/range';
@@ -15,6 +16,7 @@ export {
   Checkbox,
   Icon,
   Input,
+  Modal,
   Page,
   Pagination,
   Range,
