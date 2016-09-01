@@ -3,7 +3,7 @@
 @import '~bootstrap/modal';
 
 .modal {
-  padding: $spacer;
+  padding: $spacer * 2;
   background: rgba($body-color, 0.9);
   display: block;
 }
