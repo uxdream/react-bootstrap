@@ -6,6 +6,8 @@ import {
   Checkbox,
   Icon,
   Input,
+  Loader,
+  LoadingArea,
   Modal,
   Page,
   Pagination,
@@ -263,12 +265,24 @@ export default class View extends Component {
               />
             </div>
           </section>
+          <section className="loaders">
+            <h1>Loader</h1>
+            <div>
+              <Loader />
+            </div>
+          </section>
+          <section>
+            <h1>Loading area</h1>
+            <div>
+              <LoadingArea loading>{ ' ' }</LoadingArea>
+            </div>
+          </section>
           <section>
             <h1>Modal</h1>
             <div>
               <Modal
                 close={ () => {
-                  console.log('Close modal');
+                  console.log('Close modal'); // eslint-disable-line no-console
                 } }
               />
             </div>

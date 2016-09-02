@@ -5,7 +5,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Icon from '../icon';
 
-import { propTypes } from '../../utils';
+import { icons, propTypes } from '../../utils';
 
 export default class Checkbox extends Component {
   static propTypes = {
@@ -52,13 +52,13 @@ export default class Checkbox extends Component {
     );
 
     return (
-      <div
+      <span
         { ...rest }
         className={ classes }
         onClick={ this._onChange }
       >
-        <Icon icon="&#xE5CA;" />
-      </div>
+        <Icon icon={ icons.check } />
+      </span>
     );
   }
 

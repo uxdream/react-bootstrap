@@ -1,0 +1,8 @@
+@import '../../bootstrap';
+
+.loading-area {
+  & > .loader {
+    margin: $spacer * 2 auto;
+    display: block;
+  }
+}

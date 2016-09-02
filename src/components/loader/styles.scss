@@ -1,0 +1,22 @@
+@import '../../bootstrap';
+
+@keyframes loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  $size: $spacer * 2;
+  $border-width: $spacer / 4;
+
+  width: $size;
+  height: $size;
+  border: $border-width solid;
+  border-color: $brand-primary $gray-lighter $gray-lighter;
+  border-radius: 50%;
+  user-select: none;
+  display: inline-block;
+
+  animation: loader-rotate linear 2s infinite;
+}
