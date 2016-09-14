@@ -37,9 +37,9 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.3",
     "classnames": "2.2.5",
+    "rc-slider": "5.1.1",
     "react": "15.3.1",
-    "react-select": "1.0.0-beta14",
-    "react-slider": "uxdream/react-slider",
-    "react-router": "2.7.0"
+    "react-router": "2.7.0",
+    "react-select": "1.0.0-beta14"
   }
 }

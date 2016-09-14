@@ -2,9 +2,11 @@ import './styles.scss';
 
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
-import ReactSlider from 'react-slider';
+import RcSlider from 'rc-slider';
 
 import { propTypes } from '../../utils';
+
+import Handle from './handle';
 
 export default class Range extends Component {
   static propTypes = {
@@ -68,18 +70,13 @@ export default class Range extends Component {
 
     return (
       <div className={ classes }>
-        <ReactSlider
+        <RcSlider
           { ...restProps }
-          withBars
-          barClassName="range__bar"
-          className="range__trail"
-          handleActiveClassName="range__handle--active"
-          handleClassName="range__handle"
+          handle={ <Handle>{ children }</Handle> }
           onChange={ this._onChange }
+          tipFormatter={ null }
           value={ value }
-        >
-          <div>{ children ? children : value }</div>
-        </ReactSlider>
+        />
       </div>
     );
   }

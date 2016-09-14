@@ -33,10 +33,10 @@
   user-select: none;
 
   &.range--danger {
-    .range__trail {
-      &.disabled {
+    .rc-slider {
+      &.rc-slider-disabled {
         &:before,
-        .range__bar {
+        .rc-slider-track {
           background: mix($progress-bar-danger-bg, $progress-bg);
         }
       }
@@ -46,16 +46,16 @@
       }
     }
 
-    .range__bar {
+    .rc-slider-track {
       background: $progress-bar-danger-bg;
     }
   }
 
   &.range--success {
-    .range__trail {
-      &.disabled {
+    .rc-slider {
+      &.rc-slider-disabled {
         &:before,
-        .range__bar {
+        .rc-slider-track {
           background: mix($progress-bar-success-bg, $progress-bg);
         }
       }
@@ -65,16 +65,16 @@
       }
     }
 
-    .range__bar {
+    .rc-slider-track {
       background: $progress-bar-success-bg;
     }
   }
 
   &.range--warning {
-    .range__trail {
-      &.disabled {
+    .rc-slider {
+      &.rc-slider-disabled {
         &:before,
-        .range__bar {
+        .rc-slider-track {
           background: mix($progress-bar-warning-bg, $progress-bg);
         }
       }
@@ -84,26 +84,27 @@
       }
     }
 
-    .range__bar {
+    .rc-slider-track {
       background: $progress-bar-warning-bg;
     }
   }
 
-  .range__trail {
+  .rc-slider {
     @include border-radius($progress-border-radius);
 
     height: $height;
     background: $progress-bg;
+    position: relative;
     cursor: pointer;
 
-    &.disabled {
+    &.rc-slider-disabled {
       &:before,
-      .range__bar {
+      .rc-slider-track {
         background: mix($progress-bar-bg, $progress-bg);
       }
 
       &,
-      .range__handle {
+      .rc-slider-handle {
         cursor: $cursor-disabled;
       }
     }
@@ -134,37 +135,29 @@
     }
   }
 
-  .range__bar {
+  .rc-slider-track {
     height: 100%;
     background: $progress-bar-bg;
-
-    &.range__bar-1 {
-      display: none;
-    }
   }
 
-  .range__handle {
-    margin-top: ($handle-height - $height) / -2;
-    z-index: $zindex-dropdown - 10 !important;
-    cursor: grab;
-
-    &.range__handle--active {
+  .rc-slider-handle {
+    &:active {
       cursor: grabbing;
     }
 
-    & > div {
-      @include border-radius($progress-border-radius);
+    @include border-radius($progress-border-radius);
 
-      margin-left: $handle-width / -2;
-      width: $handle-width;
-      height: $handle-height;
-      background: $btn-secondary-bg;
-      box-shadow: inset 0 0 0 1px $btn-secondary-border;
-      position: absolute;
+    margin: ($handle-height - $height) * -1 0 0 $handle-width / -2;
+    width: $handle-width;
+    height: $handle-height;
+    background: $btn-secondary-bg;
+    box-shadow: inset 0 0 0 1px $btn-secondary-border;
+    position: absolute;
+    z-index: $zindex-dropdown - 10 !important;
+    cursor: grab;
 
-      font-size: $height * 1.5;
-      text-align: center;
-      line-height: $handle-height;
-    }
+    font-size: $height * 1.5;
+    text-align: center;
+    line-height: $handle-height;
   }
 }
