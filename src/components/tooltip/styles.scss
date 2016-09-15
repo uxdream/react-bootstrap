@@ -1,0 +1,53 @@
+@import '../../bootstrap';
+
+@import '~bootstrap/tooltip';
+
+.tooltip-outer {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.tooltip {
+  visibility: hidden;
+
+  &.tooltip-top,
+  &.tooltip-bottom {
+    left: 50%;
+
+    transform: translatex(-50%);
+  }
+
+  &.tooltip-left,
+  &.tooltip-right {
+    top: 50%;
+
+    transform: translatey(-50%);
+  }
+
+  &.tooltip-top {
+    bottom: 100%;
+  }
+
+  &.tooltip-bottom {
+    top: 100%;
+  }
+
+  &.tooltip-left {
+    right: 100%;
+  }
+
+  &.tooltip-right {
+    left: 100%;
+  }
+
+  .tooltip-inner {
+    white-space: nowrap;
+  }
+}

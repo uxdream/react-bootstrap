@@ -14,6 +14,7 @@ import {
   Range,
   Select,
   Tabs,
+  Tooltip,
 } from '../src';
 
 export default class View extends Component {
@@ -203,13 +204,13 @@ export default class View extends Component {
             </div>
             <div>
               <Button>
-                Face <Icon icon="&#xE87D;" />
+                Heart <Icon icon="&#xE87D;" />
               </Button>
               <Button variant="secondary">
-                Face <Icon icon="&#xE87D;" />
+                Heart <Icon icon="&#xE87D;" />
               </Button>
               <Button variant="link">
-                Face <Icon icon="&#xE87D;" />
+                Heart <Icon icon="&#xE87D;" />
               </Button>
             </div>
           </section>
@@ -421,6 +422,35 @@ export default class View extends Component {
                   },
                 ] }
               />
+            </div>
+          </section>
+          <section className="tooltips">
+            <h1>Tooltip</h1>
+            <div>
+              <Tooltip
+                position="left"
+                tooltip="Heart, heart, heart..."
+              >
+                <Icon icon="&#xE87D;" />
+              </Tooltip>
+              <Tooltip
+                position="top"
+                tooltip="Heart, heart, heart..."
+              >
+                <Icon icon="&#xE87D;" />
+              </Tooltip>
+              <Tooltip
+                position="bottom"
+                tooltip="Heart, heart, heart..."
+              >
+                <Icon icon="&#xE87D;" />
+              </Tooltip>
+              <Tooltip
+                position="right"
+                tooltip="Heart, heart, heart..."
+              >
+                <Icon icon="&#xE87D;" />
+              </Tooltip>
             </div>
           </section>
         </Page>

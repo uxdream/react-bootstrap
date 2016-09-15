@@ -11,6 +11,7 @@ import Pagination  from './components/pagination';
 import Range       from './components/range';
 import Select      from './components/select';
 import Tabs        from './components/tabs';
+import Tooltip     from './components/tooltip';
 
 export {
   Breadcrumb,
@@ -26,4 +27,5 @@ export {
   Range,
   Select,
   Tabs,
+  Tooltip,
 };
