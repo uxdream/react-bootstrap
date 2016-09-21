@@ -54,10 +54,10 @@ export default class Tooltip extends Component {
     );
 
     return (
-      <div className={ classes }>
+      <span className={ classes }>
         { children }
         { this.renderTooltip(props) }
-      </div>
+      </span>
     );
   }
 }

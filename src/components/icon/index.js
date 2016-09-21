@@ -31,7 +31,7 @@ export default class Icon extends Component {
     );
 
     return (
-      <div
+      <span
         { ...props }
         className={ classes }
         dangerouslySetInnerHTML={ { // eslint-disable-line react/no-danger
