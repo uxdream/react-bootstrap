@@ -34,10 +34,10 @@ export default class Tooltip extends Component {
     );
 
     return (
-      <div className={ classes }>
-        <div className="tooltip-arrow" />
-        <div className="tooltip-inner">{ tooltip }</div>
-      </div>
+      <span className={ classes }>
+        <span className="tooltip-arrow" />
+        <span className="tooltip-inner">{ tooltip }</span>
+      </span>
     );
   }
 
