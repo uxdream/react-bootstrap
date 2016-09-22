@@ -16,6 +16,7 @@
 
 .tooltip {
   visibility: hidden;
+  pointer-events: none;
 
   &.tooltip-top,
   &.tooltip-bottom {
