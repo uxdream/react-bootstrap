@@ -4,12 +4,51 @@
 
 .nav {
   &.nav-tabs {
+    $border: 0.2rem;
+
+    margin: 0;
+    border-bottom-width: $border / 2;
+
     user-select: none;
 
     .nav-item {
+      margin-bottom: $border * -1;
+
       .nav-link {
+        padding-left: $spacer * 2;
+        padding-right: $spacer * 2;
+        border: $border transparent;
+        border-style: none none solid;
+
+        color: $body-color;
+
+        & + .nav-link {
+          margin-left: 0;
+        }
+
+        &:hover {
+          color: $link-color;
+        }
+
         &:focus {
           outline: none;
+        }
+
+        &.active {
+          background: none;
+          border-color: $brand-primary;
+          cursor: pointer;
+
+          color: $brand-primary;
+          font-weight: 600;
+        }
+
+        &.disabled {
+          opacity: 0.5;
+
+          &:hover {
+            color: $body-color;
+          }
         }
       }
     }
