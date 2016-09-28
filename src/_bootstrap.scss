@@ -1,17 +1,17 @@
-$enable-flex: true;
-$enable-grid-classes: false;
-$enable-rounded: false;
+$enable-flex: true !default;
+$enable-grid-classes: false !default;
+$enable-rounded: false !default;
 
-$body-bg: #f7f7f7;
-$body-color: #222;
+$body-bg: #f7f7f7 !default;
+$body-color: #222 !default;
 
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
 
-$headings-font-weight: 400;
+$headings-font-weight: 400 !default;
 
-$input-color: $body-color;
+$input-color: $body-color !default;
 
-$form-group-margin-bottom: 0;
+$form-group-margin-bottom: 0 !default;
 
 @import '~bootstrap/mixins';
 @import '~bootstrap/variables';
