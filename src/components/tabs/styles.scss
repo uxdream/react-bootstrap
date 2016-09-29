@@ -32,20 +32,21 @@
           outline: none;
         }
 
+        &.active,
+        &.disabled {
+          &:hover {
+            color: $body-color;
+          }
+        }
+
         &.active {
           background: none;
           border-color: $brand-primary;
-          cursor: pointer;
-
-          color: $brand-primary;
+          cursor: default;
         }
 
         &.disabled {
           opacity: 0.5;
-
-          &:hover {
-            color: $body-color;
-          }
         }
       }
     }
