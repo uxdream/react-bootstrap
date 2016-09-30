@@ -13,10 +13,6 @@ export default class Icon extends Component {
     size: PropTypes.number,
   }
 
-  static defaultProps = {
-    size: 20,
-  }
-
   render() {
     const {
       className,
@@ -37,9 +33,7 @@ export default class Icon extends Component {
         dangerouslySetInnerHTML={ { // eslint-disable-line react/no-danger
           __html: icon,
         } }
-        style={ {
-          fontSize: size,
-        } }
+        style={ size ? { fontSize: size } : undefined }
       />
     );
   }
