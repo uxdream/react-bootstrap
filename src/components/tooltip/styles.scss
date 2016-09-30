@@ -15,9 +15,10 @@
 }
 
 .tooltip {
-  max-width: 600px;
   visibility: hidden;
   pointer-events: none;
+
+  white-space: nowrap;
 
   &.tooltip-top,
   &.tooltip-bottom {
@@ -50,7 +51,7 @@
   }
 
   .tooltip-inner {
-    white-space: nowrap;
+    max-width: none;
     display: block;
   }
 }
